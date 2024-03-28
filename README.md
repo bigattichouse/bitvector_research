@@ -39,6 +39,7 @@ Population count.
 Magnitudes are as simple as counting the number of 1s in the integer.. which is a surprisingly difficult thing to do.
 I found a rather elegant method shown below.
 
+```
  int BitCount(unsigned int u)
     {
          unsigned int uCount;
@@ -46,6 +47,7 @@ I found a rather elegant method shown below.
          uCount = u - ((u >> 1) & 033333333333) - ((u >> 2) & 011111111111);
          return ((uCount + (uCount >> 3)) & 030707070707) % 63;
     }
+```
 
 From: [https://web.archive.org/web/20151229003112/http://blogs.msdn.com/b/jeuge/archive/2005/06/08/hakmem-bit-count.aspx]
 [Explained: https://tekpool.wordpress.com/category/bit-count/]
