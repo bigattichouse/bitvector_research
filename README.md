@@ -1,3 +1,7 @@
+TL;DR:  Clone the repo. run `make` .. it'll build and run both tests and you'll see the timing comparison
+
+***
+
 Years ago I created ![VSDB, a vectorspace database](https://github.com/bigattichouse/vectorspace) for document similarity search and clustering. I'm slowly working on reorganizing it into a RAG tool for LLMs, which includes rethinking some things about it operates, and
 deciding if I want to continue to work on it in C, or switch to a newer language.  The beast was built organinically as I learned about term vectorspaces, so it's a bit of a hot mess for anyone.  I mostly use it for research.
 
@@ -51,3 +55,29 @@ I found a rather elegant method shown below.
 
 From: [https://web.archive.org/web/20151229003112/http://blogs.msdn.com/b/jeuge/archive/2005/06/08/hakmem-bit-count.aspx]
 [Explained: https://tekpool.wordpress.com/category/bit-count/]
+
+
+Expected Output:
+
+```
+Testing Float Vectors:
+
+MyDogHasFleas*MyCatHasFleas cosine=0.750000
+MyDogHasFleas*MyNotDogHasNotFleas cosine=0.000000
+MyDogHasFleas*MyHamsterHasHiccups cosine=0.500000
+Computation of 30000000 cosines took about 1.50692 seconds
+
+
+./bitvector
+
+Testing Bit Vectors:
+
+MyDogHasFleas*MyCatHasFleas cosine=0.750000
+MyDogHasFleas*MyHamsterHasHiccups cosine=0.500000
+We lose the ability to have negative dimensions.. but that's ok..
+'MyDogHasFleas*MyNotDogHasNotFleas cosine=0.750000
+Computation of 30000000 cosines took about 0.58750 seconds
+
+```
+
+
