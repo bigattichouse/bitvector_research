@@ -36,15 +36,8 @@ I tried various algos
 Population count.
 [https://en.wikipedia.org/wiki/Hamming_weight]
 
-granted, a simple 4 bit lookup makes the problem smaller. O(1)
-then just write it out for 64k or something for 8 bits. fast fast
-0000 = 0
-0001 = 1
-0010 = 1
-0011 = 2
-
-Then just look it up. 8 bits would cover quite a bit, can break a problem into pieces easily in C
-some 64bit integer > 8X8bit words in C, lookup from 64k map... four operations per int.
+Magnitudes are as simple as counting the number of 1s in the integer.. which is a surprisingly difficult thing to do.
+I found a rather elegant method shown below.
 
  int BitCount(unsigned int u)
     {
