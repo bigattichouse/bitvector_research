@@ -1,5 +1,6 @@
 TL;DR:  Clone the repo. run `make` .. it'll build and run both tests and you'll see the timing comparison
-
+***
+My write-up if you'd like to read more: https://bigattichouse.medium.com/dreamcoat-cosine-similarity-using-bit-values-part-1-3c64cc4b9caa
 ***
 
 Years ago I created ![VSDB, a vectorspace database](https://github.com/bigattichouse/vectorspace) for document similarity search and clustering. I'm slowly working on reorganizing it into a RAG tool for LLMs, which includes rethinking some things about it operates, and
