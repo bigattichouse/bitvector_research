@@ -48,7 +48,6 @@ I found a rather elegant method shown below.
  int BitCount(unsigned int u)
     {
          unsigned int uCount;
-
          uCount = u - ((u >> 1) & 033333333333) - ((u >> 2) & 011111111111);
          return ((uCount + (uCount >> 3)) & 030707070707) % 63;
     }
