@@ -80,5 +80,10 @@ We lose the ability to have negative dimensions.. but that's ok..
 Computation of 30000000 cosines took about 0.58750 seconds
 
 ```
+***
+**Future work:**
+I've got some ideas for a CNN based on this idea and kinda merging with Conway's Game of Life.  Reddit u/StepFunction pointed me to https://arxiv.org/abs/1603.05279 which is very relevant.
 
+**Variably sized parameters**
+If you think about it, you could just expand the bits for items you feel are more important. sorta variable bit length.  Maybe some important items could expand to 4 bits in the stack, instead of only one. I'll have to mull that over more. Obvsiously would need to plan that from the start, as changing sizes would be a problem.
 
